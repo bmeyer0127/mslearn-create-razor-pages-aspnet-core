@@ -15,6 +15,9 @@ namespace ContosoPizza.Pages
             _service = service;
         }
 
+        [BindProperty]
+        public Pizza NewPizza { get;set; } = default!;
+
         public void OnGet()
         {
             PizzaList = _service.GetPizzas();
